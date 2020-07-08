@@ -6,3 +6,4 @@
     var startrek = { character: 'Spock' };
     greetings(startrek.character);
 })();
+// >_ tsc app.ts --> compila el archivo app.ts para pasarlo a app.js
