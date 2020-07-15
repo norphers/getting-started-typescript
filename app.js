@@ -1,8 +1,21 @@
-// (function(){})(); == función anónima autoinvocada o patrón módulo de javascript 
-(function () {
-    function greetings(character) {
-        console.table('Hello ' + character);
+"use strict";
+(() => {
+    class Avenger {
+        /*
+        name:string;
+        team:string;
+        realName:string;
+        canFight:boolean;
+        winsAverage:number;
+        */
+        constructor(name, team, realName, canFight = true, winsAverage) {
+            this.name = name;
+            this.team = team;
+            this.realName = realName;
+            this.canFight = canFight;
+            this.winsAverage = winsAverage;
+        }
     }
-    var startrek = { character: 'Spock' };
-    greetings(startrek.character);
+    const antman = new Avenger('Antman', 'Captain America');
+    console.log(antman);
 })();
