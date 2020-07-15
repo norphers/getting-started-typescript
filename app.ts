@@ -1,15 +1,15 @@
+(()=>{
 
-// (function(){})(); == función anónima autoinvocada o patrón módulo de javascript 
+    const addition = (a:number, b:number): number => a+b;
 
-(function(){ 
+    const name = ():string => 'Hello World!';
 
-    function greetings(character:string) 
-    {
-        console.table('Hello ' + character);
+    const getSalary = ():Promise<string> => {
+        return new Promise ((resolve, reject) => {
+            resolve('John');
+        });
     }
-    
-    const startrek = {character: 'Spock'};
-    
-    greetings(startrek.character);
-    
+
+    getSalary().then(a => console.log(a.toUpperCase()));
+
 })();
